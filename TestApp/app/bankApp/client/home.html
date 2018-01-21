@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hyperledger Fabric Test Application</title>
+
+    <!-- require jquery and bootstrap scripts -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body ng-app="application" ng-controller="appController">
+    <div id="header">
+        <!-- cusip, tradeid, amount, quantity, location code, trade type, trade status (active,MOD, CXCR, cancel, settle), firm account, customer account, counter account.  -->
+    <label class="fontheader">Test Trade App</label>
+    </div>
+    <div id="content">
+        <div class="formbody">
+            <form class="formdesign">
+                <div class="form-group">
+                    <label style="width: 650px; height: 50px;text-align: center;size: 100px;">Generate Trade</label>
+                    <hr/>
+                </div>
+                <div class="form-group">
+                    <label for="cusip">Cusip</label>
+                    <input type="text" class="form-control" id="cusip" placeholder="e.g. 1231233">
+                </div>
+                <div class="form-group">
+                    <label for="tradeId">Trade ID</label>
+                    <input type="text" class="form-control" id="tradeId" placeholder="e.g. 24123123">
+                </div>
+                <div class="form-group">
+                    <label for="amount">Amount</label>
+                    <input type="text" class="form-control" id="amount" placeholder="e.g. 10">
+                </div>
+                <div class="form-group">
+                    <label for="locationCode">Location Code</label>
+                    <input type="text" class="form-control" id="locationCode" placeholder="e.g. 4352">
+                </div>
+                <div class="form-group">
+                    <label for="tradeType">Trade Type</label>
+                    <input type="text" class="form-control" id="tradeType" placeholder="e.g. EQ, FXD etc .">
+                </div>
+                <div class="form-group">
+                    <label for="tradeStatus">Trade Status</label>
+                    <input type="text" class="form-control" id="tradeStatus" placeholder="A" value="A" disabled="true">
+                </div>
+                <div class="form-group">
+                    <label for="firmAccount">Firm Account</label>
+                    <input type="text" class="form-control" id="firmAccount" placeholder="e.g. 1234">
+                </div>
+                <div class="form-group">
+                    <label for="customerAccount">Customer Account</label>
+                    <input type="text" class="form-control" id="customerAccount" placeholder="e.g. 213123">
+                </div>
+                <div class="form-group">
+                    <label for="counterpartyAccount">Counterparty Account</label>
+                    <input type="text" class="form-control" id="counterpartyAccount" placeholder="e.g. 41232">
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="form-control" id="submit" value="Book Trade">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="footer"></div>
+</body>
+
+</html>
